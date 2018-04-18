@@ -1,8 +1,10 @@
 import React from 'react'
 import { render } from 'react-dom'
-import Principal from './enlaces'
+import Media from './Playlist/Component/media'
 
-import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import '../node_modules/materialize-css/dist/css/materialize.css'
+import '../node_modules/materialize-css/dist/js/materialize'
+import './Estilos.css'
 
 const App = document.getElementById('root')
-render(<Principal />, App)
+render(<Media type="video" title="Mi titulo del Elemento" author="Robert Gonzalez" image="http://materializecss.com/images/sample-1.jpg" />, App)
