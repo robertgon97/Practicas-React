@@ -2,8 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 class Media extends React.Component {
+  constructor (props) {
+    super(props)
+    this.click.bind(this)
+  }
   click (event) {
-    console.log(event)
+    console.log(this.props.title)
   }
   render () {
     return (
