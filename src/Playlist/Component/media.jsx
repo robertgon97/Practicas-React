@@ -2,8 +2,20 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 class Media extends Component {
+  state = {
+    image: this.props.image,
+    title: this.props.title,
+    author: this.props.author,
+    type: this.props.type
+  }
   handleClick = (event) => { // Heredo los props automaticamente
-    console.log(this.props.title)
+    // console.log(this.props.title)
+    this.setState({ // Modifico los estados
+      image: this.props.image,
+      title: this.props.title,
+      author: this.props.author,
+      type: this.props.type
+    })
   }
   render () {
     return (
@@ -11,11 +23,11 @@ class Media extends Component {
         <div className="col s2 m2">
           <div className="card link" onClick={this.handleClick}>
             <div className="card-image">
-              <img src={this.props.image} alt={this.props.title} />
-              <span className="card-title">{this.props.title}</span>
+              <img src={this.state.image} alt={this.state.title} />
+              <span className="card-title">{this.state.title}</span>
             </div>
             <div className="card-content">
-              <p>{this.props.author}</p>
+              <p>{this.state.author}</p>
             </div>
           </div>
         </div>
