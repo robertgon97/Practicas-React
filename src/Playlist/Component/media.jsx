@@ -4,13 +4,19 @@ import PropTypes from 'prop-types'
 class Media extends Component {
   state = {
     image: this.props.image,
-    title: this.props.title,
-    author: this.props.author,
+    title: 'Titulo fake',
+    author: 'Click para obtener elementos reales',
     type: this.props.type
   }
-  handleClick = (event) => { // Heredo los props automaticamente
-    // console.log(this.props.title)
-    this.setState({ // Modifico los estados
+  // constructor (props) {
+  //   super(props)
+  // }
+  componentWillMount(){
+    // Se ejecuta antes de montar el componente
+    // Se podría usar para hacer un setState()
+  }
+  handleClick = (event) => {
+    this.setState({
       image: this.props.image,
       title: this.props.title,
       author: this.props.author,
@@ -33,6 +39,34 @@ class Media extends Component {
         </div>
       </div>
     )
+  }
+  componentDidMount(){
+    //Solo se lanza una vez
+    //Ideal para llamar a una API, hacer un setInteval, etc
+  }
+
+  //Actualización:
+	componentWillReceiveProps(){
+    //Es llamado cuando el componente recibe nuevas propiedades.
+  }
+  shouldComponentUpdate(){
+    //Idea para poner una condición y  si las propiedades que le llegaron anteriormente
+    // eran las mismas que tenia retornar false para evitar re-renderear el componente
+  }
+  componentWillUpdate(){
+    //metodo llamado antes de re-renderizar el componente si shouldComponentUpdate devolvió true
+  }
+
+  // re-render si es necesario...
+
+  componentDidUpdate(){
+    //Método llamado luego del re-render
+  }
+  componentWillUnmount(){
+    //Método llamado antes de desmontar el componente
+  }
+  componentDidCatch(){
+    // Si ocurre algún error, lo capturo desde acá:
   }
 }
 
