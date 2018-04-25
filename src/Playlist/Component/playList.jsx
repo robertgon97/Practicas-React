@@ -4,22 +4,19 @@ import Media from './media'
 
 class Playlist extends Component {
   state = {
-    id: this.props.DB.categories[0].id,
-    description: this.props.DB.categories[0].description,
-    title: this.props.DB.categories[0].title,
-    playlist: this.props.DB.categories[0].playlist
-  }
-  componentWillMount(){
-    console.log(this.props.DB)
+    id: this.props.id,
+    description: this.props.description,
+    title: this.props.title,
+    playlist: this.props.playlist
   }
   render () {
     let arrays = this.state.playlist
     return (
       <div>
-        <div class="divider"></div>
+        <div className="divider"></div>
         <div className="row playlist">
           <div className="col s12">
-            <div class="section">
+            <div className="section">
               <h5>{this.state.title}</h5>
               <p>{this.state.description}</p>
             </div>
