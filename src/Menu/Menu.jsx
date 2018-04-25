@@ -9,7 +9,7 @@ class Menu extends Component {
             <a className="brand-logo center">
               <img src="../favicon.ico" alt="Gonth's" height="65" />
             </a>
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <ul id="nav-mobile" className="left hide-on-med-and-down">
               <li><a href="https://github.com/robertgon97">Github</a></li>
               <li><a href="https://www.facebook.com/robertgonzalezoropeza">Facebook</a></li>
               <li><a href="https://twitter.com/@robert_gon97">Twitter</a></li>

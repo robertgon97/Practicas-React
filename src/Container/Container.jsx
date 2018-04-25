@@ -13,7 +13,7 @@ class Container extends Component {
         <h1 className="center-align">Reproductor Gonth's</h1>
         {
           categories.map((categorie) => {
-            return <Playlist {... categorie} key={categorie.id} />
+            return <Playlist {... categorie} key={categorie.id} handleOpenModal={this.props.handleOpenModal} />
           })
         }
       </div>

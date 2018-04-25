@@ -22,6 +22,7 @@ class Media extends Component {
       author: this.props.author,
       type: this.props.type
     })
+    this.props.openModal(this.props)
   }
   render () {
     return (

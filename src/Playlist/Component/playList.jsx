@@ -23,7 +23,7 @@ class Playlist extends Component {
           </div>
           {
             arrays.map((item) => {
-              return <Media {...item} key={item.id} />
+              return <Media {...item} key={item.id} openModal={this.props.handleOpenModal} />
             })
           }
         </div>
