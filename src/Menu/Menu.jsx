@@ -7,7 +7,7 @@ class Menu extends Component {
         <nav>
           <div className="nav-wrapper">
             <a className="brand-logo center">
-              <img src="../favicon.ico" alt="Gonth's" height="65" />
+              <img src="./favicon.ico" alt="Gonth's" height="65" />
             </a>
             <ul id="nav-mobile" className="left hide-on-med-and-down">
               <li><a href="https://github.com/robertgon97">Github</a></li>
