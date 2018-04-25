@@ -29,7 +29,7 @@ class Media extends Component {
         <div className="card link" onClick={this.handleClick}>
           <div className="card-image">
             <img src={this.state.image} alt={this.state.title} />
-            <span className="card-title">{this.state.title}</span>
+            <span className="card-title truncate">{this.state.title}</span>
           </div>
           <div className="card-content">
             <p>{this.state.author}</p>
