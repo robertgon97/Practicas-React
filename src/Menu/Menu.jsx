@@ -5,15 +5,14 @@ class Menu extends Component {
     return (
       <div className="navbar-fixed"> 
         <nav>
-          <div class="nav-wrapper">
-            <a class="brand-logo">Gonth's</a>
-            <ul class="right hide-on-med-and-down">
-              <li><a>Link 1</a></li>
-              <li><a>Link 2</a></li>
-              <li><a>Link 3</a></li>
-              <li><a>Link 4</a></li>
-              <li><a>Link 5</a></li>
-              <li><a>Link 6</a></li>
+          <div className="nav-wrapper">
+            <a className="brand-logo center">
+              <img src="../favicon.ico" alt="Gonth's" height="65" />
+            </a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+              <li><a href="https://github.com/robertgon97">Github</a></li>
+              <li><a href="https://www.facebook.com/robertgonzalezoropeza">Facebook</a></li>
+              <li><a href="https://twitter.com/@robert_gon97">Twitter</a></li>
             </ul>
           </div>
         </nav>

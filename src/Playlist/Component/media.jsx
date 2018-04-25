@@ -26,7 +26,7 @@ class Media extends Component {
   render () {
     return (
       <div className="col s3">
-        <div className="card link" onClick={this.handleClick}>
+        <div className="card hoverable link" onClick={this.handleClick}>
           <div className="card-image">
             <img src={this.state.image} alt={this.state.title} />
             <span className="card-title truncate">{this.state.title}</span>
