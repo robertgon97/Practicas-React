@@ -15,12 +15,21 @@ class Playlist extends Component {
   render () {
     let arrays = this.state.playlist
     return (
-      <div className="row playlist">
-        {
-          arrays.map((item) => {
-            return <Media {...item} key={item.id} />
-          })
-        }
+      <div>
+        <div class="divider"></div>
+        <div className="row playlist">
+          <div className="col s12">
+            <div class="section">
+              <h5>{this.state.title}</h5>
+              <p>{this.state.description}</p>
+            </div>
+          </div>
+          {
+            arrays.map((item) => {
+              return <Media {...item} key={item.id} />
+            })
+          }
+        </div>
       </div>
     )
   }
