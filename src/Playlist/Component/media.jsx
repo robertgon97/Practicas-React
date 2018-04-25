@@ -1,19 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class Media extends React.Component {
-  constructor (props) {
-    super(props)
-    this.click.bind(this)
-  }
-  click (event) {
+class Media extends Component {
+  handleClick = (event) => { // Heredo los props automaticamente
     console.log(this.props.title)
   }
   render () {
     return (
       <div className="row">
         <div className="col s2 m2">
-          <div className="card link" onClick={this.click}>
+          <div className="card link" onClick={this.handleClick}>
             <div className="card-image">
               <img src={this.props.image} alt={this.props.title} />
               <span className="card-title">{this.props.title}</span>
