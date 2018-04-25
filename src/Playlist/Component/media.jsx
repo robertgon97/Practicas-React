@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 class Media extends Component {
   state = {
     image: this.props.image,
-    title: 'Titulo fake',
-    author: 'Click para obtener elementos reales',
+    title: this.props.title,
+    author: this.props.author,
     type: this.props.type
   }
   // constructor (props) {
@@ -25,16 +25,14 @@ class Media extends Component {
   }
   render () {
     return (
-      <div className="row">
-        <div className="col s2 m2">
-          <div className="card link" onClick={this.handleClick}>
-            <div className="card-image">
-              <img src={this.state.image} alt={this.state.title} />
-              <span className="card-title">{this.state.title}</span>
-            </div>
-            <div className="card-content">
-              <p>{this.state.author}</p>
-            </div>
+      <div className="col s2 m2">
+        <div className="card link" onClick={this.handleClick}>
+          <div className="card-image">
+            <img src={this.state.image} alt={this.state.title} />
+            <span className="card-title">{this.state.title}</span>
+          </div>
+          <div className="card-content">
+            <p>{this.state.author}</p>
           </div>
         </div>
       </div>
@@ -49,10 +47,10 @@ class Media extends Component {
 	componentWillReceiveProps(){
     //Es llamado cuando el componente recibe nuevas propiedades.
   }
-  shouldComponentUpdate(){
+  //shouldComponentUpdate(){
     //Idea para poner una condición y  si las propiedades que le llegaron anteriormente
     // eran las mismas que tenia retornar false para evitar re-renderear el componente
-  }
+  //}
   componentWillUpdate(){
     //metodo llamado antes de re-renderizar el componente si shouldComponentUpdate devolvió true
   }
